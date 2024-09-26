@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Time Tracker",
+    "version": "1.0",
+    "permissions": ["activeTab", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
